@@ -28,11 +28,28 @@ def hows_the_weather(temperature):
     
 
 def fizzbuzz(num):
-    # your code here
-    pass
+    if num % 3 == 0 and num % 5 == 0:
+        return "FizzBuzz"
+    elif num % 3 == 0:
+        return "Fizz"
+    elif num % 5 == 0:
+        return "Buzz"
+    else:
+        return num
 
 def calculator(operation, num1, num2):
-    return (num1 + operation + num2)
+    try:
+        if operation == '+':
+            return num1 + num2
+        elif operation == '-':
+            return num1 - num2
+        elif operation == '*':
+            return num1 * num2
+        elif operation == '/':
+            return num1 / num2
+    except TypeError:
+        print("Invalid operation!")
+        return None
     
 
 
